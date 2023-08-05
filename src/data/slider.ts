@@ -6,7 +6,7 @@ import VisaImg from "../../public/images/visa.jpg";
 const SliderData = [
   {
     image: Flight1,
-    heading: "Find your Next Adventure",
+    heading: "REVOLUTIONIZE TRAVEL EXPERIENCES",
     content: "Get Inspiration for your next trip",
   },
   {

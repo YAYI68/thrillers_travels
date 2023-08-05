@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 type Props = {
-  imageUrl: string;
+  imageUrl: any;
   heading: string;
   content: string;
   position: number;
