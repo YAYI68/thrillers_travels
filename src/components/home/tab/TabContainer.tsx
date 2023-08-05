@@ -29,7 +29,7 @@ const TabContainer = (props: Props) => {
   const [tab, setTab] = useState("Flight");
   const [change, setChange] = useState("");
   return (
-    <div className="rounded-lg  bg-white lg:translate-y-[-5rem] p-2 translate-y-[-.2rem]   w-[90%] lg:w-[80%] border border-black">
+    <div className="rounded-lg  bg-white lg:translate-y-[-5rem] p-2 translate-y-[-.2rem]   w-[90%] lg:w-[80%] shadow-lg">
       <div className=" w-full flex flex-col items-center" id="tab">
         <div className="w-full lg:w-[30%] flex justify-between text-center  p-2 rounded-[1.5rem] bg-gray-200">
           <TabButton name="Flight" setTab={setTab} tab={tab} />
