@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
 @layer components {
   .nav_link {
     @apply relative before:w-0 hover:before:w-full before:h-1 before:rounded before:transition-[width] before:duration-150 before:absolute before:left-0 before:bottom-[-.2rem] before:bg-blue-500;

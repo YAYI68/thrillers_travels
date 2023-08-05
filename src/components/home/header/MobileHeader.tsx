@@ -34,7 +34,7 @@ const MobileHeader = (props: Props) => {
     <nav className="w-full h-full bg-red-600 flex items-center justify-center lg:hidden  relative">
       <div className="w-full p-2 bg-white h-full">
         <div className=" w-full h-full flex items-center py-1 justify-between">
-          <div className="w-[30%] h-full">
+          <div className="w-[40%] md:w-[20%] h-full">
             <Image src={ThrillerImg} alt={" "} className="w-full h-full" />
           </div>
           <button
