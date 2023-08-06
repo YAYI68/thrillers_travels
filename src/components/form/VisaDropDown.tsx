@@ -82,7 +82,7 @@ function VisaDropDown(props: DropDownType) {
   };
   useClickAway(DropDownRef, clickOut);
 
-  const handleSelect = (option) => {
+  const handleSelect = (option: VisaType) => {
     onChange(option.type);
     setSelectedVisa(option);
     setToggle(false);

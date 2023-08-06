@@ -2,6 +2,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { Slider } from ".";
 import SliderData from "../../../data/slider";
+import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 
 type Props = {};
 
@@ -48,8 +49,18 @@ const HeroSlider = (props: Props) => {
           />
         ))}
 
-        <button className="absolute z-[2] h-[3rem] w-[3rem] bg-black left-0 lg:left-2 top-[50%] -translate-y-0"></button>
-        <button className="absolute z-[2] h-[3rem] w-[3rem] bg-black right-0 lg:right-2 top-[50%] -translate-y-0"></button>
+        <button
+          onClick={moveLeft}
+          className="absolute z-[2] h-[3rem] w-[3rem] left-0 lg:left-2 top-[50%] -translate-y-0"
+        >
+          <SlArrowLeft className="h-full w-full text-white" />
+        </button>
+        <button
+          onClick={moveRight}
+          className="absolute z-[2] h-[3rem] w-[3rem] right-0 lg:right-2 top-[50%] -translate-y-0"
+        >
+          <SlArrowRight className="h-full w-full text-white" />
+        </button>
       </div>
     </div>
   );

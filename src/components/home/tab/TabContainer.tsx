@@ -1,5 +1,6 @@
 "use client";
 import { CountryDropDown } from "@/components/form";
+import VisaDropDown from "@/components/form/VisaDropDown";
 import React, { Dispatch, SetStateAction, useState } from "react";
 
 type TabProps = {
@@ -28,6 +29,14 @@ type Props = {};
 const TabContainer = (props: Props) => {
   const [tab, setTab] = useState("Flight");
   const [change, setChange] = useState("");
+  const [loading, setLoading] = useState(false);
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  };
   return (
     <div className="rounded-lg  bg-white lg:translate-y-[-5rem] p-2 translate-y-[-.2rem]   w-[90%] lg:w-[80%] shadow-lg">
       <div className=" w-full flex flex-col items-center" id="tab">
@@ -37,7 +46,7 @@ const TabContainer = (props: Props) => {
           <TabButton name="Stay" setTab={setTab} tab={tab} />
         </div>
       </div>
-      <form id="form" className="w-full mt-[1rem]">
+      <form onSubmit={handleSubmit} id="form" className="w-full mt-[1rem]">
         <div className="flex  flex-col lg:flex-row lg:justify-between items-center gap-4">
           <div className="w-[90%] lg:w-[30%]">
             <CountryDropDown onChange={setChange} label="Home Country" />
@@ -46,12 +55,12 @@ const TabContainer = (props: Props) => {
             <CountryDropDown onChange={setChange} label="Destination" />
           </div>
           <div className="w-[90%] lg:w-[30%]">
-            <CountryDropDown onChange={setChange} label="" />
+            <VisaDropDown onChange={setChange} label="" />
           </div>
         </div>
         <div className=" w-full mt-4 flex items-center justify-center">
-          <button className="rounded-md p-2 text-center w-[40%] bg-blue-400 text-white">
-            Search
+          <button className="rounded-md p-2 text-center w-[40%] bg-blue-400 text-white flex flex-col items-center justify-center">
+            {!loading ? <span> Search</span> : <span></span>}
           </button>
         </div>
       </form>

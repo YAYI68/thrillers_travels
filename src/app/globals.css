@@ -2,12 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --black: #000;
+  --grey: #f4f4f4;
+  --dark-grey: #696969;
+  --white: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 5px;
+  height: 2rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
 html,
 body {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @layer components {
   .nav_link {
     @apply relative before:w-0 hover:before:w-full before:h-1 before:rounded before:transition-[width] before:duration-150 before:absolute before:left-0 before:bottom-[-.2rem] before:bg-blue-500;
