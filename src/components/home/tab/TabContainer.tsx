@@ -1,6 +1,7 @@
 "use client";
 import { CountryDropDown } from "@/components/form";
 import VisaDropDown from "@/components/form/VisaDropDown";
+import { Spinner } from "@/components/ui";
 import React, { Dispatch, SetStateAction, useState } from "react";
 
 type TabProps = {
@@ -60,7 +61,7 @@ const TabContainer = (props: Props) => {
         </div>
         <div className=" w-full mt-4 flex items-center justify-center">
           <button className="rounded-md p-2 text-center w-[40%] bg-blue-400 text-white flex flex-col items-center justify-center">
-            {!loading ? <span> Search</span> : <span></span>}
+            {!loading ? <span> Search</span> : <Spinner />}
           </button>
         </div>
       </form>

@@ -25,7 +25,7 @@ const Slider = (props: Props) => {
         <div className="absolute w-full z-[2] h-full ">
           <div className="w-full h-full relative ">
             <div className="absolute lg:left-[50%] left-[10%] w-[80%] lg:w-[50%] lg:-translate-x-1/2 top-[25%] lg:top-[35%] text-center text-white">
-              <h1 className=" text-[2.2rem] lg:text-[3rem] text-center font-semibold ">
+              <h1 className=" text-[2rem] lg:text-[3rem] text-center font-semibold uppercase">
                 {heading}
               </h1>
               <p className=" lg:text-[1.2rem]">{content}</p>
@@ -38,7 +38,7 @@ const Slider = (props: Props) => {
           <Image src={imageUrl} alt="vacation" className="w-full h-full" />
         </div>
         {/* Current Indicator */}
-        <div className="w-[30%]  absolute bottom-0 left-[5%] text-white flex items-center gap-2">
+        <div className="w-[30%]  absolute bottom-0 left-[0%] text-white flex items-center gap-2">
           <p>
             0<span>{current}</span>
           </p>

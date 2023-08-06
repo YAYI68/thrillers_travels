@@ -51,13 +51,13 @@ const HeroSlider = (props: Props) => {
 
         <button
           onClick={moveLeft}
-          className="absolute z-[2] h-[3rem] w-[3rem] left-0 lg:left-2 top-[50%] -translate-y-0"
+          className="absolute z-[2] lg:h-[3rem] lg:w-[3rem] w-[1.5rem] h-[1.5rem] left-0 lg:left-2 top-[50%] -translate-y-0"
         >
           <SlArrowLeft className="h-full w-full text-white" />
         </button>
         <button
           onClick={moveRight}
-          className="absolute z-[2] h-[3rem] w-[3rem] right-0 lg:right-2 top-[50%] -translate-y-0"
+          className="absolute z-[2] lg:h-[3rem] lg:w-[3rem] w-[1.5rem] h-[1.5rem] right-0 lg:right-2 top-[50%] -translate-y-0"
         >
           <SlArrowRight className="h-full w-full text-white" />
         </button>

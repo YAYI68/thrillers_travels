@@ -51,7 +51,7 @@ const MobileHeader = (props: Props) => {
       </div>
       {/* header Slide In */}
       <div
-        className={`w-full p-2 bg-[rgba(0,0,0,.2)] absolute top-[100%] left-0 transition-[transform] duration-300 border rounded ${
+        className={`w-full p-2 bg-white absolute top-[100%] left-0 transition-[transform] duration-300 border rounded ${
           slideIn ? "translate-x-0" : "translate-x-[-100%]"
         }  `}
       >
