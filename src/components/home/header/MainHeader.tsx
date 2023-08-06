@@ -11,7 +11,7 @@ const MainHeader = (props: Props) => {
       <div className="w-[80%]  h-full flex items-center justify-between">
         <div className="w-[10%] h-full flex items-center gap-2">
           <Image src={ThrillerPng} alt="" className="h-full w-[2.5rem]" />
-          <Link href={""} className=" text-center text-white items-center ">
+          <Link href={"/"} className=" text-center text-white items-center ">
             {" "}
             <span className="text-[1.3rem]">Thrillers</span>{" "}
             <span>travels</span>{" "}
@@ -20,16 +20,16 @@ const MainHeader = (props: Props) => {
         <div className=" w-[40%] h-full py-2 px-4">
           <ul className="w-full h-full flex items-center justify-between text-white">
             <li className="nav_link">
-              <Link href={"w-full"}>Home</Link>
+              <Link href={"/"}>Home</Link>
             </li>
             <li className="nav_link">
-              <Link href={"w-full"}>Flights</Link>
+              <Link href={"/not_found"}>Flights</Link>
             </li>
             <li className="nav_link">
-              <Link href={"w-full"}>About</Link>
+              <Link href={"/not_found"}>About</Link>
             </li>
             <li className="nav_link">
-              <Link href={"w-full"}>Contact</Link>
+              <Link href={"/not_found"}>Contact</Link>
             </li>
           </ul>
         </div>
