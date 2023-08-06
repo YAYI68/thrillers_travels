@@ -24,18 +24,14 @@ type OptionProps = {
   onSelect: (country: CountryType) => void;
   options: CountryType[];
   onSearch: Dispatch<SetStateAction<string>>;
-  ref: RefObject<HTMLDivElement>;
 };
 
 const OptionsDropDown = (props: OptionProps) => {
-  const { onSelect, options, onSearch, ref } = props;
+  const { onSelect, options, onSearch } = props;
 
   return (
     <div className="absolute z-[2] max-h-[15rem]   rounded-md flex flex-col items-center bg-white border w-full bottom-[110%] left-0 ">
-      <div
-        ref={ref}
-        className="w-full border p-2 flex items-center sticky top-0 left-0"
-      >
+      <div className="w-full border p-2 flex items-center sticky top-0 left-0">
         <button className="w-[15%]">
           <CiSearch className="text-gray-400" />
         </button>
@@ -107,12 +103,13 @@ function CountryDropDown(props: DropDownType) {
   return (
     <div className="relative cursor-pointer rounded-md border w-full h-full border-black">
       {toggle ? (
-        <OptionsDropDown
-          ref={DropDownRef}
-          onSelect={handleSelect}
-          options={FilterCountries}
-          onSearch={setSearchName}
-        />
+        <div ref={DropDownRef} className="w-full h-full">
+          <OptionsDropDown
+            onSelect={handleSelect}
+            options={FilterCountries}
+            onSearch={setSearchName}
+          />
+        </div>
       ) : (
         ""
       )}
@@ -131,7 +128,7 @@ function CountryDropDown(props: DropDownType) {
           </div>
           <span>{selectedCountry.name}</span>
         </div>
-        <button className="flex w-[20%] flex-col items-center justify-center">
+        <button className="flex w-[12%] md:w-[10%] flex-col items-center justify-center">
           <MdKeyboardArrowDown className="h-6 w-6 " />
         </button>
       </div>

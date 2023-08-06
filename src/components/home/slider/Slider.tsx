@@ -38,7 +38,7 @@ const Slider = (props: Props) => {
           <Image src={imageUrl} alt="vacation" className="w-full h-full" />
         </div>
         {/* Current Indicator */}
-        <div className="w-[30%]  absolute bottom-0 left-[0%] text-white flex items-center gap-2">
+        <div className="w-[30%]  absolute bottom-0 left-2 text-white flex items-center gap-2">
           <p>
             0<span>{current}</span>
           </p>

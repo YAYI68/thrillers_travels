@@ -17,7 +17,7 @@ const TabButton = (props: TabProps) => {
     <button
       className={` ${
         name === tab ? "bg-blue-400 text-white" : ""
-      } flex-1 font-semibold p-2  text-xs lg:text-base rounded-[1rem]`}
+      } flex-1 font-medium p-2  text-xs lg:text-base rounded-[1rem]`}
       onClick={() => setTab(name)}
     >
       {name}
@@ -56,11 +56,11 @@ const TabContainer = (props: Props) => {
             <CountryDropDown onChange={setChange} label="Destination" />
           </div>
           <div className="w-[90%] lg:w-[30%]">
-            <VisaDropDown onChange={setChange} label="" />
+            <VisaDropDown onChange={setChange} label="Visa" />
           </div>
         </div>
         <div className=" w-full mt-4 flex items-center justify-center">
-          <button className="rounded-md p-2 text-center w-[40%] bg-blue-400 text-white flex flex-col items-center justify-center">
+          <button className="rounded-md p-2 text-center w-[90%] lg:w-[40%] bg-blue-400 text-white flex flex-col items-center justify-center">
             {!loading ? <span> Search</span> : <Spinner />}
           </button>
         </div>
